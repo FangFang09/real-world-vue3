@@ -8,7 +8,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
     <div class="wrapper">
       <nav>
-        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/">Events</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
@@ -51,6 +51,10 @@ nav a {
 
 nav a:first-of-type {
   border: 0;
+}
+
+h4 {
+  font-size: 20px;
 }
 
 @media (min-width: 1024px) {
