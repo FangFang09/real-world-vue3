@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import EventList from '@/views/EventList.vue'
 import EventDetails from '@/views/EventDetails.vue'
 import About from '@/views/About.vue'
+import NotFound from '@/views/NotFound.vue'
 
 const routes = [
   {
@@ -19,12 +20,13 @@ const routes = [
     path: '/about',
     name: 'About',
     component: About
-  }
+  },
+  { path: '/:pathMatch(.*)', component: NotFound }
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes: [{ path: '/:pathMatch(.*)', component: NotFoundComponent }]
+  routes
 })
 
 export default router
